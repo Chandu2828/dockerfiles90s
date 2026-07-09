@@ -3,4 +3,4 @@ RUN dnf install nginx -y
 RUN rm -rf /usr/share/nginx/html/*
 ONBUILD COPY src/ /usr/share/nginx/html/
 CMD ["nginx", "-g", "daemon off;"]
-
+# on build won't execute here 
